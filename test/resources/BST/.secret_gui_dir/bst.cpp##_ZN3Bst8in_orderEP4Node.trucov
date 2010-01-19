@@ -1,0 +1,6 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+ 67% Bst::in_order(Node*) (4/6) branches
+	bst.cpp:178: 1/2 branches: if(curr_ptr != NULL)
+	bst.cpp:190: destination: }
+	bst.cpp:180: 1/2 branches: if(curr_ptr->m_left_ptr != NULL)
+	bst.cpp:182: destination: in_order(curr_ptr->m_left_ptr);

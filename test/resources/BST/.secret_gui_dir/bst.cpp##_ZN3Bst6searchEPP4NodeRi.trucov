@@ -1,0 +1,11 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::search(Node**, int&) (0/6) branches
+	bst.cpp:139: 0/2 branches: if (id == (*node_ptr)->m_student_id )
+	bst.cpp:141: destination: return &(**node_ptr);
+	bst.cpp:143: destination: else if (id < (*node_ptr)->m_student_id)
+	bst.cpp:143: 0/2 branches: else if (id < (*node_ptr)->m_student_id)
+	bst.cpp:145: destination: return search(&((*node_ptr)->m_left_ptr), id);
+	bst.cpp:147: destination: else if (id > (*node_ptr)->m_student_id)
+	bst.cpp:147: 0/2 branches: else if (id > (*node_ptr)->m_student_id)
+	bst.cpp:149: destination: return search(&((*node_ptr)->m_right_ptr), id);
+	bst.cpp:153: destination: return NULL;

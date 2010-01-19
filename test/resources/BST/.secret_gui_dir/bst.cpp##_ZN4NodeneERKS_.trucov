@@ -1,0 +1,5 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Node::operator!=(Node const&) (0/2) branches
+	bst.cpp:82: 0/2 branches: if (this->m_student_id != the_node.m_student_id)
+	bst.cpp:84: destination: return true;
+	bst.cpp:86: destination: return false;

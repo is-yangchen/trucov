@@ -1,0 +1,26 @@
+Welcome to Trucov 0.09.10.04
+
+This release and past releases are available for checkout at http://trucov.googlecode.com/svn/tags/
+
+NEW FEATURES:
+
+Feature 127: Add sweep command.  
+
+ENHANCEMENTS:
+
+Issue 105: Speed boost to gcno and gcda file parsing.
+
+RELEASE FIXES:
+
+Issue  18: Bad config printing statements.   
+Issue  53: Drawing fake arcs shoulod be off by default.
+Issue 110: render_report notification filenames are too long. 
+Issue 111: Help for selection is confusing.
+Issue 112: Selection doesn't work with some flags.
+Issue 113: Help doesn't show defaults.
+Issue 114: --outdir doesn't behave as expected.
+Issue 115: Line grammar parsing failed on some files with inline code.
+Issue 119: Output files are being created one level above the current directory.
+Issue 120: Output files are hidden files. 
+Issue 121: --outdir requires a trailing slash or weirdness occurs.
+ 

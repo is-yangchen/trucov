@@ -1,0 +1,5 @@
+
+--builddir=.
+--srcdir=.
+--default-command=status
+

@@ -1,0 +1,6 @@
+/home/william/Desktop/trucov/sample_test/simple_tests/crazy_include/src/test.cpp
+ 50% main (2/4) branches
+	src/test.cpp:1: 1/2 branches: #include "func.h"
+	src/test.cpp:7: destination: {
+	src/test.cpp:6: 1/2 branches: if( argc )
+	src/test.cpp:16: destination: func(argc);

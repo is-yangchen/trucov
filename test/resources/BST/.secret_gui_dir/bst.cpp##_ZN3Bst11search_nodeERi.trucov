@@ -1,0 +1,5 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::search_node(int&) (0/2) branches
+	bst.cpp:126: 0/2 branches: if (m_root_ptr != NULL)
+	bst.cpp:128: destination: return search(&m_root_ptr, id);
+	bst.cpp:132: destination: cout << "MESSAGE:: Empty tree\n";

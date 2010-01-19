@@ -1,0 +1,11 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::post_order(Node*) (0/6) branches
+	bst.cpp:212: 0/2 branches: if(curr_ptr != NULL)
+	bst.cpp:214: destination: if(curr_ptr->m_left_ptr != NULL)
+	bst.cpp:224: destination: }
+	bst.cpp:214: 0/2 branches: if(curr_ptr->m_left_ptr != NULL)
+	bst.cpp:216: destination: post_order(curr_ptr->m_left_ptr);
+	bst.cpp:218: destination: if(curr_ptr->m_right_ptr != NULL)
+	bst.cpp:218: 0/2 branches: if(curr_ptr->m_right_ptr != NULL)
+	bst.cpp:220: destination: post_order(curr_ptr->m_right_ptr);
+	bst.cpp:222: destination: cout << *curr_ptr << "\n";

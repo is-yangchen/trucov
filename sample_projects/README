@@ -1,0 +1,3 @@
+The F1 directory has test case file structors for our SELCOV config program.
+
+./trucov config_test -c sample_test/simple_tests/hello/ -o . -s .
