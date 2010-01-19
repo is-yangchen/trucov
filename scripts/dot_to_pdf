@@ -1,0 +1,14 @@
+#!/bin/sh
+
+DIRLIST="dirlist.txt"
+find "$1" -name \*.dot > $DIRLIST
+
+count=0
+while read line
+do count=$(($count+1));
+    LINE2=`echo $line | sed 's/.dot/.jpg/g'`
+    echo "dot -Tjpg $line -o $LINE2"
+    dot -Tpdf "$line" -o "$LINE2"
+done < $DIRLIST
+echo "Files processed: $count";
+rm $DIRLIST

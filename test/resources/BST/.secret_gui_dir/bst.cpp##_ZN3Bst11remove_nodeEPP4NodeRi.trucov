@@ -1,0 +1,45 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+ 24% Bst::remove_node(Node**, int&) (8/34) branches
+	bst.cpp:233: 1/2 branches: if( (*node_ptr)->m_student_id == id )
+	bst.cpp:277: destination: else if (((*node_ptr)->m_student_id) < id)
+	bst.cpp:235: 1/2 branches: if (((*node_ptr)->m_right_ptr != NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:251: destination: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:235: 1/2 branches: if (((*node_ptr)->m_right_ptr != NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:237: destination: if (delete_min(&((*node_ptr)->m_right_ptr)))
+	bst.cpp:237: 0/2 branches: if (delete_min(&((*node_ptr)->m_right_ptr)))
+	bst.cpp:239: destination: (*node_ptr)->m_student_name = tmp_std_name;
+	bst.cpp:246: destination: cout << "ERROR:: Delete Node error\n";
+	bst.cpp:251: 1/2 branches: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:251: destination: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:251: 0/2 branches: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr != NULL))
+	bst.cpp:260: destination: else if (((*node_ptr)->m_right_ptr != NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:253: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:253: 0/2 branches: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:253: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:254: destination: Node* old_node_ptr = (*node_ptr);
+	bst.cpp:256: 0/2 branches: delete(old_node_ptr);
+	bst.cpp:256: destination: delete(old_node_ptr);
+	bst.cpp:257: destination: return true;
+	bst.cpp:260: 1/2 branches: else if (((*node_ptr)->m_right_ptr != NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:269: destination: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:260: 1/2 branches: else if (((*node_ptr)->m_right_ptr != NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:269: destination: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:262: 1/2 branches: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:262: destination: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:265: 1/2 branches: delete(old_node_ptr);
+	bst.cpp:266: destination: return true;
+	bst.cpp:269: 0/2 branches: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:269: destination: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:285: destination: }
+	bst.cpp:269: 0/2 branches: else if (((*node_ptr)->m_right_ptr == NULL) && ((*node_ptr)->m_left_ptr == NULL))
+	bst.cpp:271: destination: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:285: destination: }
+	bst.cpp:271: 0/2 branches: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:271: destination: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:272: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:272: 0/2 branches: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:272: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:273: destination: (*node_ptr) = NULL;
+	bst.cpp:277: 0/2 branches: else if (((*node_ptr)->m_student_id) < id)
+	bst.cpp:279: destination: return remove_node((&((*node_ptr)->m_right_ptr)), id);
+	bst.cpp:283: destination: return remove_node((&((*node_ptr)->m_left_ptr)), id);

@@ -1,0 +1,7 @@
+/home/william/Desktop/Cpt S 421/selcov/Testing/simple_tests/prog_include/include/util.h
+ 50% max(int, int) (1/2) branches
+	../src/util.cpp:5: 1/2 branches: <src_line>
+	../src/util.cpp:6:destination:<src_line>
+ 50% min(int, int) (1/2) branches
+	../src/util.cpp:13: 1/2 branches: <src_line>
+	../src/util.cpp:16:destination:<src_line>

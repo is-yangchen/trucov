@@ -1,0 +1,6 @@
+/home/william/Desktop/trucov/Testing/simple_tests/prog_include/src/prog.cpp
+ 50% __static_initialization_and_destruction_0(int, int) (2/4) branches
+	src/prog.cpp:16: 1/2 branches: }
+	src/prog.cpp:16: destination: }
+	src/prog.cpp:16: 1/2 branches: }
+	src/prog.cpp:16: destination: }

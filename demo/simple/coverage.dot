@@ -1,0 +1,107 @@
+digraph coverage{
+   subgraph ".##include##dog.h"{
+      subgraph function3565148803{
+      B_Header_3565148803 ->  B_3565148803_953_0 [ color="black", style="invis" ];
+      B_3565148803_953_0 -> B_3565148803_953_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3565148803_953_1 -> B_3565148803_953_2 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3565148803_953_2 -> B_3565148803_953_3 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3565148803_953_3 -> B_3565148803_953_4 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_3565148803 [ label=< ../include/dog.h <br /> Dog::woof() <br /> Exec Count: 1 <br /> Coverage: 100%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_3565148803_953_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_3565148803_953_1 [ label=<  Lines: 11...13<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_3565148803_953_2 [ label=<  Line: 13<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_3565148803_953_3 [ label=<  Line: 14<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_3565148803_953_4 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+   }
+   subgraph ".##src##cat.c"{
+      subgraph function3297155567{
+      B_Header_3297155567 ->  B_3297155567_4_0 [ color="black", style="invis" ];
+      B_3297155567_4_0 -> B_3297155567_4_1 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3297155567_4_1 -> B_3297155567_4_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3297155567_4_1 -> B_3297155567_4_3 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3297155567_4_2 -> B_3297155567_4_4 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3297155567_4_3 -> B_3297155567_4_4 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3297155567_4_4 -> B_3297155567_4_5 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_Header_3297155567 [ label=< ../src/cat.c <br /> purr <br /> Exec Count: 0 <br /> Coverage: 0%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_3297155567_4_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_3297155567_4_1 [ label=<  Lines: 18...19<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="diamond" ];
+      B_3297155567_4_2 [ label=<  Line: 21<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_3297155567_4_3 [ label=<  Line: 25<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_3297155567_4_4 [ label=<  Line: 27<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_3297155567_4_5 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function3775268653{
+      B_Header_3775268653 ->  B_3775268653_3_0 [ color="black", style="invis" ];
+      B_3775268653_3_0 -> B_3775268653_3_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3775268653_3_1 -> B_3775268653_3_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3775268653_3_1 -> B_3775268653_3_3 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3775268653_3_2 -> B_3775268653_3_4 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3775268653_3_3 -> B_3775268653_3_4 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_3775268653_3_4 -> B_3775268653_3_5 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_3775268653 [ label=< ../src/cat.c <br /> meow <br /> Exec Count: 1 <br /> Coverage: 50%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_3775268653_3_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_3775268653_3_1 [ label=<  Lines: 5...6<br />Count: 1 > style="filled, rounded"  fillcolor="#FFFFB0" color="goldenrod1" penwidth=4 shape="diamond" ];
+      B_3775268653_3_2 [ label=<  Line: 8<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_3775268653_3_3 [ label=<  Line: 12<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_3775268653_3_4 [ label=<  Line: 14<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_3775268653_3_5 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+   }
+   subgraph ".##src##main.cpp"{
+      subgraph function790864387{
+      B_Header_790864387 ->  B_790864387_965_0 [ color="black", style="invis" ];
+      B_790864387_965_0 -> B_790864387_965_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_790864387_965_1 -> B_790864387_965_2 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_790864387_965_2 -> B_790864387_965_3 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_790864387 [ label=< ../src/main.cpp <br /> global constructors keyed to main <br /> Exec Count: 1 <br /> Coverage: 100%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_790864387_965_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_790864387_965_1 [ label=<  Line: 31<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_790864387_965_2 [ label=<  Line: 31<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_790864387_965_3 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function851233984{
+      B_Header_851233984 ->  B_851233984_964_0 [ color="black", style="invis" ];
+      B_851233984_964_0 -> B_851233984_964_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_851233984_964_1 -> B_851233984_964_2 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_851233984_964_1 -> B_851233984_964_5 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_851233984_964_2 -> B_851233984_964_3 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_851233984_964_2 -> B_851233984_964_5 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_851233984_964_3 -> B_851233984_964_4 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_851233984_964_4 -> B_851233984_964_5 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_851233984_964_5 -> B_851233984_964_6 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_851233984 [ label=< ../src/main.cpp <br /> __static_initialization_and_destruction_0(int, int) <br /> Exec Count: 1 <br /> Coverage: 50%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_851233984_964_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_851233984_964_1 [ label=<  Line: 31<br />Count: 1 > style="filled, rounded"  fillcolor="#FFFFB0" color="goldenrod1" penwidth=4 shape="diamond" ];
+      B_851233984_964_2 [ label=<  Line: 31<br />Count: 1 > style="filled, rounded"  fillcolor="#FFFFB0" color="goldenrod1" penwidth=4 shape="diamond" ];
+      B_851233984_964_3 [ label=<  Line: 77<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_851233984_964_4 [ label=<  Line: 77<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_851233984_964_5 [ label=<  Line: 31<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_851233984_964_6 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function1773441047{
+      B_Header_1773441047 ->  B_1773441047_955_0 [ color="black", style="invis" ];
+      B_1773441047_955_0 -> B_1773441047_955_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_1 -> B_1773441047_955_2 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_2 -> B_1773441047_955_3 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_3 -> B_1773441047_955_4 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1773441047_955_3 -> B_1773441047_955_5 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_3 -> B_1773441047_955_6 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1773441047_955_3 -> B_1773441047_955_7 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1773441047_955_4 -> B_1773441047_955_7 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1773441047_955_5 -> B_1773441047_955_6 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_6 -> B_1773441047_955_7 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_1773441047_955_7 -> B_1773441047_955_8 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_1773441047 [ label=< ../src/main.cpp <br /> main <br /> Exec Count: 1 <br /> Coverage: 25%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_1773441047_955_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_1773441047_955_1 [ label=<  Lines: 7...12<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_1773441047_955_2 [ label=<  Line: 14<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_1773441047_955_3 [ label=<  Line: 16<br />Count: 1 > style="filled, rounded"  fillcolor="#FFFFB0" color="goldenrod1" penwidth=4 shape="diamond" ];
+      B_1773441047_955_4 [ label=<  Lines: 19...20<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_1773441047_955_5 [ label=<  Line: 22<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_1773441047_955_6 [ label=<  Line: 24<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_1773441047_955_7 [ label=<  Line: 30<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_1773441047_955_8 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+   }
+}

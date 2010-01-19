@@ -1,0 +1,5 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::maximum_node(Node*) (0/2) branches
+	bst.cpp:168: 0/2 branches: if(node_ptr->m_right_ptr == NULL)
+	bst.cpp:170: destination: return node_ptr;
+	bst.cpp:172: destination: return maximum_node(node_ptr->m_right_ptr);

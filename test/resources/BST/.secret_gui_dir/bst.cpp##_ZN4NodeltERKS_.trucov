@@ -1,0 +1,4 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+ 50% Node::operator<(Node const&) (1/2) branches
+	bst.cpp:46: 1/2 branches: if (this->m_student_id < the_node.m_student_id)
+	bst.cpp:48: destination: return true;

@@ -1,0 +1,33 @@
+Welcome to Trucov 0.09.08.02
+
+This release and past releases are available for checkout at http://trucov.googlecode.com/svn/tags/
+
+NEW FEATURES:
+
+Feature 37: Revision script module added.
+Feature 44: Option --version added.
+Feature 57: Command render added.
+Feature 58: Command list added.
+Feature 59: Command dot_report added.
+Feature 60: Command render_report added.
+Feature 61: Command status added.
+
+RELEASE FIXES:
+
+Issue  5: Source lines in report output have white space.
+Issue 19: Selection on Command Line not specified correctly.
+Issue 23: Poor error messages.
+Issue 40: Source directories retains defaults.
+Issue 46: Branch summaries not sorted by line number.
+Issue 52: Dot filenames incorrect.
+Issue 53: Drawing fake arcs should be off.
+Issue 55: Coverage graphs aren't marking all fake blocks.
+Issue 56: Coverage graph shows debug information.
+Issue 62: Revision script option loses path on chdir.
+Issue 63: Command specififed is put into selection list.
+Issue 65: Bad command should output error file processing.
+Issue 67: All functions with no branches reported as 100% coverage.
+
+
+
+

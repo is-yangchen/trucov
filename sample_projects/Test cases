@@ -1,0 +1,17 @@
+Tested:
+.gdca .gcno file locations: these two files are produced in the root directory only and non of the sub-directory folders referenced by the main program file.
+
+Still need to test:
+
+When compiling test files in a main directory which references two files in two separate sub-directories with the same name i.e. MainDir->Dir_1->test.h and MainDir-Dir_2->test.h, the compiler does compile. NEED TO TEST whether gcov produces gcno and gcda files which have the full directory path name i.e. /home/user/Desktop/MainDir/Dir1/test.h & /home/user/Desktop/MainDir/Dir2/test.h.
+
+
+
+Test Commands
+
+ ./selcov list --chdir ../../Testing/fast_protocol/
+
+./selcov list --chdir ../../Testing/fast_protocol/ -b ../../Selcov/Compilation
+
+./selcov list --response-file config_test.txt
+

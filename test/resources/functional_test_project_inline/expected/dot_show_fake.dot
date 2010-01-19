@@ -1,0 +1,60 @@
+digraph coverage{
+   subgraph graph_key{
+      key_text [ label=< <font color="darkgreen">Executed arc / block</font> <br /> <font color="red3">Non-executed arc / block</font> <br /> <font color="goldenrod1">Partially executed branch</font> <br /> Solid line = Normal arc / block <br /> Dashed line = Fake arc / block > color="black" shape="box" ];
+   }
+   subgraph "src1##main.cpp"{
+      subgraph function474450051{
+      B_Header_474450051 ->  B_474450051_6_0 [ color="black", style="invis" ];
+      B_474450051_6_0 -> B_474450051_6_1 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_474450051_6_1 -> B_474450051_6_2 [ label = "1" , color="darkgreen" , style="solid" ]; 
+      B_Header_474450051 [ label=< src1/main.cpp <br /> main <br /> Exec Count: 1 <br /> Coverage: 100%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_474450051_6_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_474450051_6_1 [ label=<  Lines: 26...29<br />Count: 1 > style="filled, rounded"  fillcolor="palegreen" color="darkgreen" shape="box" ];
+      B_474450051_6_2 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function740819954{
+      B_Header_740819954 ->  B_740819954_3_0 [ color="black", style="invis" ];
+      B_740819954_3_0 -> B_740819954_3_1 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_740819954_3_1 -> B_740819954_3_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_Header_740819954 [ label=< src1/main.cpp <br /> foof() <br /> Exec Count: 0 <br /> Coverage: 0%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_740819954_3_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_740819954_3_1 [ label=<  Lines: 4...14<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_740819954_3_2 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function1295334747{
+      B_Header_1295334747 ->  B_1295334747_5_0 [ color="black", style="invis" ];
+      B_1295334747_5_0 -> B_1295334747_5_1 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1295334747_5_1 -> B_1295334747_5_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_1295334747_5_1 -> B_1295334747_5_3 [ label = "0" , color="red3" , style="dashed", penwidth=2 ]; 
+      B_1295334747_5_2 -> B_1295334747_5_3 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_Header_1295334747 [ label=< src1/main.cpp <br /> foobar() <br /> Exec Count: 0 <br /> Coverage: 0%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_1295334747_5_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_1295334747_5_1 [ label=<  Lines: 21...23<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_1295334747_5_2 [ label=<  Line: 24<br /><br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_1295334747_5_3 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+      subgraph function2280278123{
+      B_Header_2280278123 ->  B_2280278123_4_0 [ color="black", style="invis" ];
+      B_2280278123_4_0 -> B_2280278123_4_1 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_2280278123_4_1 -> B_2280278123_4_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_2280278123_4_1 -> B_2280278123_4_3 [ label = "0" , color="red3" , style="dashed", penwidth=2 ]; 
+      B_2280278123_4_2 -> B_2280278123_4_3 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_Header_2280278123 [ label=< src1/main.cpp <br /> barb() <br /> Exec Count: 0 <br /> Coverage: 0%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_2280278123_4_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_2280278123_4_1 [ label=<  Lines: 16...18<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_2280278123_4_2 [ label=<  Line: 19<br /><br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_2280278123_4_3 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+   }
+   subgraph "src2##dog.cpp"{
+      subgraph function3644265284{
+      B_Header_3644265284 ->  B_3644265284_4_0 [ color="black", style="invis" ];
+      B_3644265284_4_0 -> B_3644265284_4_1 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_3644265284_4_1 -> B_3644265284_4_2 [ label = "0" , color="red3" , style="solid", penwidth=2 ]; 
+      B_Header_3644265284 [ label=< src2/dog.cpp <br /> woof() <br /> Exec Count: 0 <br /> Coverage: 0%  > style="filled" fillcolor="grey100" color="black" penwidth=1 shape="note" ];
+      B_3644265284_4_0 [ label=< _entry_ > style="filled, rounded"  fillcolor="grey80" color="black" shape="box" ];
+      B_3644265284_4_1 [ label=<  Lines: 15...18<br />Count: 0 > style="filled, rounded"  fillcolor="rosybrown1" color="red3" penwidth=4 shape="box" ];
+      B_3644265284_4_2 [ label=< _exit_ > style="filled, rounded"  fillcolor="grey80" color="black" penwidth=4 shape="ellipse" ];
+      }
+   }
+}

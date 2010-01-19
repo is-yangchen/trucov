@@ -1,0 +1,12 @@
+Welcome to Trucov 0.09.11.02
+
+This release and past releases are available for checkout at http://trucov.googlecode.com/svn/tags/
+
+NEW FEATURES:
+
+Feature: Renamed "sweep" command to "all_report".  
+
+RELEASE FIXES:
+
+Fixed: Line Issue Bug
+ 

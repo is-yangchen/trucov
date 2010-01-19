@@ -1,0 +1,27 @@
+Welcome to Trucov 0.09.09.07
+
+This release and past releases are available for checkout at http://trucov.googlecode.com/svn/tags/
+
+NEW FEATURES:
+
+Feature 54: Pretty coverage graphs w/ color coding.
+
+RELEASE FIXES:
+
+Issue   7: Report command appends new data to old files.
+Issue   9: New test case, crazy include.
+Issue  25: Source filenames incorrect in report. 
+Issue  40: Source directories retain defaults.
+Issue  65: Bad command should output error file processing.
+Issue  98: --response-file should be --config-file.
+Issue  99: Trucov is not outputing coverage information for C programs.
+Issue 100: render command is broken.
+Issue 103: --help prints invalid command descriptions.
+
+
+
+
+
+
+
+ 
