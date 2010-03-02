@@ -55,6 +55,7 @@
 #include <boost/filesystem/operations.hpp>
 #include <boost/filesystem/path.hpp>
 #include <boost/progress.hpp>
+#include <boost/unordered_map.hpp>
 
 #include "source_file.h"
 
@@ -273,5 +274,27 @@ class Tru_utility
 
       // deliminator 
       char m_del;
+
+      struct Cache_value
+      {
+         /// Negative cache value
+         Cache_value( ) :
+            within_project(false)
+         { }
+
+         /// Positive cache value
+         explicit Cache_value( const std::string& source_path ) :
+            within_project(true),
+            source_path(source_path)
+         { }
+
+         bool within_project;
+
+         std::string source_path;
+      };
+      typedef boost::unordered_map<std::string,Cache_value> Cache;
+
+      /// cache lookup for is_within_project
+      mutable Cache m_cache;
 };
 #endif

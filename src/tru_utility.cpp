@@ -30,6 +30,8 @@
 
 #include "tru_utility.h"
 
+#include <boost/tuple/tuple.hpp>
+
 using std::sort;
 using std::map;
 using std::vector;
@@ -279,16 +281,7 @@ const bool Tru_utility::is_within_project( const vector<string> &srcFiles, const
 {
    string temp;
 
-   temp = get_filename( srcGCNO );
-
-   for ( unsigned i = 0; i < srcFiles.size(); ++i )
-   {
-      if ( temp == get_filename( srcFiles[i] ) )
-      {
-         return true;
-      }
-   }
-   return false;
+   return is_within_project( srcFiles, srcGCNO, temp );
 }
 
 const bool Tru_utility::is_within_project( 
@@ -296,18 +289,33 @@ const bool Tru_utility::is_within_project(
    const string & srcGCNO,
    string & source_path ) const
 {
-   string temp;
+   Cache::const_iterator found = m_cache.find(srcGCNO);
 
-   temp = get_filename( srcGCNO );
-   for ( unsigned i = 0; i < srcFiles.size(); ++i )
+   if( found == m_cache.cend() )
    {
-      if ( temp == get_filename( srcFiles[i] ) )
+      const string temp = get_filename( srcGCNO );
+      for ( unsigned i = 0; i < srcFiles.size(); ++i )
       {
-         source_path = srcFiles[i];  
-         return true;
+         if ( temp == get_filename( srcFiles[i] ) )
+         {
+            bool success;
+            boost::tie(found,success) = m_cache.insert( std::make_pair( srcGCNO, Cache_value(srcFiles[i]) ));
+            assert(success);
+            break;
+         }
+      }
+
+      if( found == m_cache.cend() )
+      {
+         bool success;
+         boost::tie(found, success ) = m_cache.insert( std::make_pair( srcGCNO, Cache_value() ) );
+         assert( success );
       }
    }
-   return false;
+   assert( found != m_cache.end() );
+
+   source_path = found->second.source_path;
+   return found->second.within_project;
 }
 
 const string Tru_utility::get_filename( const string & pathname ) const
