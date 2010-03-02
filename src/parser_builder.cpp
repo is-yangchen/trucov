@@ -30,6 +30,8 @@
 
 // LOCAL INCLUDES
 
+#include <cxxabi.h>
+
 #include "parser_builder.h"
 
 // USING STATEMENTS
@@ -50,10 +52,18 @@ Parser_builder::Parser_builder(
    const string & revision_script_path,
    vector<string> found_source_files )
    : m_source_files( source_files ),
-     m_revision_script_manager( revision_script_path )
+     m_revision_script_manager( revision_script_path ),
+     m_demangle_size(64),
+     m_demangle_buffer(reinterpret_cast<char*>(std::malloc(m_demangle_size)))
 {
    m_found_source_files = found_source_files;
 } // End of Parser_builder constructor
+
+///////////////////////////////////////////////////////////////////////////////
+Parser_builder::~Parser_builder( )
+{
+	std::free( m_demangle_buffer );
+}
 
 //////////////////////////////////////////////////////////////////////////////
 /// @brief 
@@ -76,33 +86,25 @@ void Parser_builder::store_record(
    // New record, so set merging mode to false
    m_merging = false;
 
-   // Create command string with mangled function signature
-   string command = "c++filt " + rName;
-   string rec_name = "";
-   // Open pipe with command string
-   FILE *fp = popen( command.c_str(), "r" );
-   char input[ 5000 ];
-   // Pipe c++filt output and get demangled function signature
-   char *buf = fgets( input, sizeof( input ), fp );
-
-   // Output error if pipe did not return data
-   if ( *buf == '\0' )
+   int status;
+   char* buffer = abi::__cxa_demangle( rName.c_str(), m_demangle_buffer, &m_demangle_size, &status );
+   string rec_name;
+   if( buffer )
    {
-      std::cerr << "ERROR: Pipe did not return data.\n";
-      rec_name = "UNKNOWN FUNCTION NAME";
+      // Demangling was successful.
+      assert( status == 0 );
+
+      m_demangle_buffer = buffer;
+      rec_name.assign(buffer);
    }
    else
    {
-      // Assign demangled funtion signature and trim newline if needed
-      rec_name = input;
-      size_t found = rec_name.find( "\n" );
-      if ( found != string::npos )
-      {
-         rec_name.resize( found );
-      }
+      // Demangling should never fail other than when the name wasn't demangleable.
+      assert( status == -2 );
+
+      rec_name = rName;
    }
-   // Close pipe
-   pclose(fp);
+   assert(m_demangle_size != 0 );
 
    // Get instances of Selector and Tru_utility classes
    Selector & selector = Selector::get_instance();

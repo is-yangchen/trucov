@@ -35,6 +35,8 @@
 #include <string>
 #include <map>
 
+#include <boost/noncopyable.hpp>
+
 // LOCAL INCLUDES
 
 #include "record.h"
@@ -44,7 +46,7 @@
 
 /// @brief
 /// Builds the data structure of a map of files for the parser class.
-class Parser_builder
+class Parser_builder : boost::noncopyable
 {
 public:
 
@@ -57,6 +59,10 @@ public:
       std::map<std::string, Source_file> & source_files,
       const std::string & revision_script_path,
       std::vector<std::string> found_source_files );
+
+   /// @brief
+   /// Free memory used for demangling.
+   ~Parser_builder( );
 
    /// @brief 
    /// Will add or merge a record into the m_records data in the correct
@@ -187,6 +193,11 @@ private:
    /// The checksum of the last merged record
    unsigned m_last_merge;
 
+   /// Cache allocation used for demangling;
+   std::size_t m_demangle_size;
+
+   /// Cache allocation used for demangling;
+   char* m_demangle_buffer;
 }; // End of class Parser_builder
 
 #endif
