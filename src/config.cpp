@@ -758,7 +758,7 @@ const bool Config::is_gcda(string file_name)
 const bool Config::is_source_file(const string & file)
 {
    string extension_types[] = 
-      {"c", "cc", "cpp", "h", "hh", "hpp", ""};
+      {"c", "cc", "cpp", "h", "hh", "hpp", "m", "mm", ""};
 
    unsigned int dot_count = count(file.begin(), file.end(), '.');
    if ((dot_count == 0) || (dot_count == 1 && file[0] == '.'))
