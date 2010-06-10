@@ -1,3 +1,9 @@
+trucov (10.2.beta) unstable; urgency=low
+
+  * Tremendous performance improvements, ~100x faster
+
+ -- J. Nick Terry <nick_terry@selinc.com>  Thu, 10 Jun 2010 15:21:17 -0700
+
 trucov (10.1) unstable; urgency=low
 
   * Repackage of 09.09.07
