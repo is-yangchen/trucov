@@ -42,8 +42,8 @@ PROJECT( TRUCOV_EXECUTABLE_NAME )
 # Version Information.                                                       #
 ##############################################################################
 SET( TRUCOV_VERSION_YEAR 10 )
-SET( TRUCOV_VERSION_REV  1 )
-SET( TRUCOV_VERSION_BUG   )
+SET( TRUCOV_VERSION_REV  2 )
+SET( TRUCOV_VERSION_BUG  beta )
 IF ( NOT TRUCOV_VERSION_BUG )
    SET( TRUCOV_VERSION "${TRUCOV_VERSION_YEAR}.${TRUCOV_VERSION_REV}" )
 ELSE()
