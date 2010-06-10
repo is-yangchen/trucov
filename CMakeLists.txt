@@ -41,11 +41,14 @@ PROJECT( TRUCOV_EXECUTABLE_NAME )
 ##############################################################################
 # Version Information.                                                       #
 ##############################################################################
-SET( TRUCOV_VERSION_MAJOR  1 )
-SET( TRUCOV_VERSION_YEAR  09 )
-SET( TRUCOV_VERSION_MONTH 12 )
-SET( TRUCOV_VERSION_DAY   07 )
-SET( TRUCOV_VERSION "${TRUCOV_VERSION_MAJOR}.${TRUCOV_VERSION_YEAR}.${TRUCOV_VERSION_MONTH}.${TRUCOV_VERSION_DAY}" )
+SET( TRUCOV_VERSION_YEAR 10 )
+SET( TRUCOV_VERSION_REV  1 )
+SET( TRUCOV_VERSION_BUG   )
+IF ( NOT TRUCOV_VERSION_BUG )
+   SET( TRUCOV_VERSION "${TRUCOV_VERSION_YEAR}.${TRUCOV_VERSION_REV}" )
+ELSE()
+   SET( TRUCOV_VERSION "${TRUCOV_VERSION_YEAR}.${TRUCOV_VERSION_REV}.${TRUCOV_VERSION_BUG}" )
+ENDIF()
 
 MESSAGE( "Welcome to Trucov ${TRUCOV_VERSION}" )
 
