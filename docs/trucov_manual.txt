@@ -1,0 +1,31 @@
+1. Build Source Code with Gcov flags to create binary and .gcno files
+2. Run binaries (with any binary specific commands) to produce .gcda file
+
+[filename] = i.e. tmp.c or tmp.cpp
+For C code:
+     $ gcc -fprofile-arcs -ftest-coverage [filename]
+     $ a.out {arguments}
+     $ gcov [filename]
+
+For C++ code:
+     $ g++ -fprofile-arcs -ftest-coverage [filename]
+     $ a.out {arguments}
+     $ gcov [filename]
+
+3. Run selcov in the directory with your .gcno & .gcda files 
+OR run selcov passing a directory containing .gcno & .gcda files
+to create .dot and coverage file.
+
+     $ pwd
+     /home/user/Desktop/Project/
+     $ ls
+     main.cpp main.gcda main.gcno
+     $ selcov new
+
+4. Run graphviz on the .dot file to create a .ps or .svg file
+     $ dot -Tps graph1.dot -o graph1.ps
+     or
+     $ dot -Tps graph1.dot -o graph1.svg
+
+5. View .ps file with an image viewer that supports viewing .ps or .svg files
+

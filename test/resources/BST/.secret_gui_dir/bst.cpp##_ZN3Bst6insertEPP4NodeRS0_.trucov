@@ -1,0 +1,6 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+ 67% Bst::insert(Node**, Node&) (4/6) branches
+	bst.cpp:110: 1/2 branches: else if (the_node < **node_ptr)
+	bst.cpp:112: destination: insert(&((*node_ptr)->m_left_ptr), the_node);
+	bst.cpp:114: 1/2 branches: else if (the_node > **node_ptr)
+	bst.cpp:120: destination: cout << "ERROR:: Duplication\n";

@@ -1,0 +1,11 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::pre_order(Node*) (0/6) branches
+	bst.cpp:195: 0/2 branches: if(curr_ptr != NULL)
+	bst.cpp:197: destination: cout << *curr_ptr << "\n";
+	bst.cpp:207: destination: }
+	bst.cpp:198: 0/2 branches: if(curr_ptr->m_left_ptr != NULL)
+	bst.cpp:200: destination: pre_order(curr_ptr->m_left_ptr);
+	bst.cpp:202: destination: if(curr_ptr->m_right_ptr != NULL)
+	bst.cpp:202: 0/2 branches: if(curr_ptr->m_right_ptr != NULL)
+	bst.cpp:204: destination: pre_order(curr_ptr->m_right_ptr);
+	bst.cpp:207: destination: }

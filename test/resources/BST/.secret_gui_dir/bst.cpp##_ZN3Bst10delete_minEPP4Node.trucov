@@ -1,0 +1,26 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::delete_min(Node**) (0/16) branches
+	bst.cpp:289: 0/2 branches: if ((*node_ptr) != NULL)
+	bst.cpp:291: destination: if((*node_ptr)->m_right_ptr == NULL)
+	bst.cpp:323: destination: cout << "Empty Tree\n";
+	bst.cpp:291: 0/2 branches: if((*node_ptr)->m_right_ptr == NULL)
+	bst.cpp:293: destination: return delete_min(&((*node_ptr)->m_left_ptr));
+	bst.cpp:296: destination: if ((*node_ptr)->m_right_ptr == NULL)
+	bst.cpp:296: 0/2 branches: if ((*node_ptr)->m_right_ptr == NULL)
+	bst.cpp:298: destination: tmp_std_name = (*node_ptr)->m_student_name;
+	bst.cpp:308: destination: else if ((*node_ptr)->m_right_ptr != NULL)
+	bst.cpp:302: 0/2 branches: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:302: destination: delete((*node_ptr)->m_left_ptr);
+	bst.cpp:303: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:303: 0/2 branches: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:303: destination: delete((*node_ptr)->m_right_ptr);
+	bst.cpp:304: destination: (*node_ptr) = NULL;
+	bst.cpp:308: 0/2 branches: else if ((*node_ptr)->m_right_ptr != NULL)
+	bst.cpp:310: destination: tmp_std_name = (*node_ptr)->m_student_name;
+	bst.cpp:326: destination: }
+	bst.cpp:316: 0/2 branches: delete(old_node_ptr->m_left_ptr);
+	bst.cpp:316: destination: delete(old_node_ptr->m_left_ptr);
+	bst.cpp:317: destination: delete(old_node_ptr);
+	bst.cpp:317: 0/2 branches: delete(old_node_ptr);
+	bst.cpp:317: destination: delete(old_node_ptr);
+	bst.cpp:318: destination: return true;

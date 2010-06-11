@@ -1,0 +1,15 @@
+1 download          qt-sdk-linux-x86-opensource-2009.03.1.bin
+
+2 chmod +x qt-sdk-linux-x86-opensource-2009.03.1.bin
+
+3 ./qt-sdk-linux-x86-opensource-2009.03.1.bin
+
+4 apt-get build-dep qt4-qmake
+
+5 cd /qttemp/qt-x11-opensource-src-4.5.2/
+
+6 ./configure
+
+7 make
+
+8 make install

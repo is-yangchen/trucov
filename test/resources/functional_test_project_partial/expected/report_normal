@@ -1,0 +1,6 @@
+ 50% /home/millerlyte87/trucov/test/resources/functional_test_project_partial/src1/main.cpp
+ 50% foof(bool) (1/2) branches
+	src1/main.cpp:3: 1/2 branches: if (x)
+	src1/main.cpp:9: destination: return 0;
+  0% foobar(bool) no branches
+100% main no branches

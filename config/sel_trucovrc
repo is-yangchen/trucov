@@ -1,0 +1,6 @@
+
+--builddir=build/
+--srcdir=src/
+--srcdir=include/
+--default-command=status
+

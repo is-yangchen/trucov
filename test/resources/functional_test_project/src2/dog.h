@@ -1,0 +1,3 @@
+
+void bark();
+void woof();

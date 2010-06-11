@@ -1,0 +1,15 @@
+
+How to build:
+
+1) cd build/
+2) ./compile.sh
+3) ./run 
+4) cd ../
+
+How to run Trucov:
+
+4) trucov status
+5) trucov report
+6) trucov render_report
+7) trucov list -s include/
+

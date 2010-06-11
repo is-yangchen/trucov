@@ -1,0 +1,6 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+ 50% __static_initialization_and_destruction_0(int, int) (2/4) branches
+	bst.cpp:339: 1/2 branches: }
+	bst.cpp:339: destination: }
+	bst.cpp:167743148: 1/2 branches: 
+	bst.cpp:339: destination: }

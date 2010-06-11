@@ -1,0 +1,4 @@
+-b build1
+-b build2
+-s src1
+-s src2

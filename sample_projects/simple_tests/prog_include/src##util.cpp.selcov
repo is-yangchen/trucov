@@ -1,0 +1,7 @@
+/home/william/Desktop/trucov/Testing/simple_tests/prog_include/src/util.cpp
+ 50% max(int, int) (1/2) branches
+	src/util.cpp:5: 1/2 branches:   if ( a > b )
+	src/util.cpp:6: destination:     return a;
+ 50% min(int, int) (1/2) branches
+	src/util.cpp:13: 1/2 branches:   if ( a < b )
+	src/util.cpp:16: destination:     return b;

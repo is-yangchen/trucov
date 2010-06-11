@@ -1,0 +1,82 @@
+Welcome to Trucov 1.09.07.02
+This is the first official non-beta release of Trucov tool.
+
+|--------------|
+| INSTALLATION | 
+|--------------|
+
+In order to compile Trucov, you must first configure CMake. This can be done by
+running the following command from Trucov's root directory:
+
+   cmake .
+
+Note: There are different configurations that the user can manually set when
+issuing the CMake command for Trucov.
+
+  1) To compile in Release mode: cmake -DCMAKE_BUILD_TYPE=Release
+  2) To compile in Debug mode:   cmake -DCMAKE_BUILD_TYPE=Debug
+  3) To compile with coverage profiling:    cmake -DCOVERAGE=On
+  4) To compile without coverage profiling: cmake -DCOVERAGE=Off
+  5) To compile with debug option enabled:  cmake -DDEBUGFLAG=On
+  6) To compile with debug option disabled: cmake -DDEBUGFLAG=Off
+  7) To compile with newer versions of boost: cmake -DBOOST_VERSION=New
+  8) To compile with older versions of boost: cmake -DBOOST_VERSION=Old
+
+After CMake has been configured, simply issue the command:
+
+   make
+
+To install Trucov, issue the command:
+
+   sudo make install
+
+This will install both the trucov binary as well as the config files.
+
+To install the Trucov GUI:
+  
+  1) Naviage the the gui directory. 
+  2) Run "./compile.sh".
+     a) If compilation fails, ensure you have QT 4.5.2 installed.
+     b) If QT 4.5.2 is not available, then run "qmake" over the gui directory, then run "make".
+  3) Once the executable trucov_gui has been compiled, run "./install.sh" to install the executable.
+
+|---------|
+| TESTING |
+|---------|
+
+To run Trucov's unit tests, do the following:
+
+   1) From Trucov's root directory, remove the trucov executable, the
+      CMakeFiles folder, and the CMakeCache.txt file.
+   2) Make sure that there is a directory named output within the
+      root folder.
+   3) Navigate the directory named build and clear out its contents.
+   4) Run ../scripts/testing_framework.sh from the build directory.
+   5) Alternatively, to manually compile and run individual unit tests:
+      a) Run "cmake ../" from the build directory.
+      b) Run "make test".
+      c) Run "sudo make install".
+      d) Run the desired unit test(s).
+      e) Run "trucov -s ../src/ -s ../include/"
+         (you may add your preferred Trucov commands and options here)
+
+To run Trucov's functional tests, do the following:
+
+   1) Navigate to the directory named build and clear out its contents
+   2) Run "make functionaltest"
+   3) Run "./all_functionaltest"
+
+|----------------|
+| FILE LOCATIONS |
+|----------------|
+
+The Trucov directory structure is layed out as follows:
+
+config/                    Two sample Trucov config files are located here.
+demo/                      IF WE KEEP THIS? Simple and complex example oprojects with which to showcase Trucov.
+gui/                       Source files for the graphical Trucov front-end tool.
+include/                   Location of Trucov's source header files.
+sample_projects/           IF WE KEEP THIS? Location of simple and more advanced sample projects with which to test Trucov.
+scripts/                   Location of scripts for converting dot files and running the unit test framework.
+src/                       Location of Trucov's source files.
+test/                      Location of functional and unit tests as well as the gtest framework files.

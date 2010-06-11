@@ -1,0 +1,5 @@
+ 32% /home/benjamin/trucov/test/resources/BST/bst.cpp
+  0% Bst::minimum_node(Node*) (0/2) branches
+	bst.cpp:159: 0/2 branches: if(node_ptr->m_left_ptr == NULL)
+	bst.cpp:161: destination: return node_ptr;
+	bst.cpp:163: destination: return minimum_node(node_ptr->m_left_ptr);
