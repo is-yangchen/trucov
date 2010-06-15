@@ -164,6 +164,13 @@ ADD_EXECUTABLE( ${TRUCOV_EXECUTABLE_NAME} ${TRUCOV_SRC}/main.cpp )
 TARGET_LINK_LIBRARIES( ${TRUCOV_EXECUTABLE_NAME} ${TRUCOV_LIBS} ${BOOST_LIBS} ${GCOV_LIBS} )
 INCLUDE_DIRECTORIES( ${TRUCOV_INCLUDE_DIRECTORIES} )
 
+
+##############################################################################
+# Trucov Compilation.                                                        #
+##############################################################################
+ADD_SUBDIRECTORY( gui )
+
+
 ##############################################################################
 # Trucov Testing.                                                            #
 ##############################################################################
