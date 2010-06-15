@@ -1,0 +1,6 @@
+syntax: glob
+*/CMakeFiles/*
+*.o
+*build/
+*.swp
+
