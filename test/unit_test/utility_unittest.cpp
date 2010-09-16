@@ -250,11 +250,11 @@ TEST( Tru_utility, create_file_name )
 TEST( Tru_utility, get_instance )
 {
    // Verify setup.
-   EXPECT_NE(NULL, (int)Tru_utility::tru_utility_ptr);
+   EXPECT_NE(NULL, (size_t)Tru_utility::tru_utility_ptr);
 
    Tru_utility * tru_utility = Tru_utility::get_instance();
    
-   EXPECT_NE(NULL, (int)Tru_utility::tru_utility_ptr);
+   EXPECT_NE(NULL, (size_t)Tru_utility::tru_utility_ptr);
 }
 
 TEST( Tru_utility, clean_path )
