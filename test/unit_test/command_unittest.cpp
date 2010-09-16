@@ -225,11 +225,11 @@ void initialize_config()
 TEST( Command, get_instance )
 {
    // Verify setup.
-   EXPECT_EQ(NULL, (int)Command::instance_ptr);
+   EXPECT_EQ(NULL, (size_t)Command::instance_ptr);
 
    Command & command = Command::get_instance();
    
-   EXPECT_NE(NULL, (int)Command::instance_ptr);
+   EXPECT_NE(NULL, (size_t)Command::instance_ptr);
 }
 
 TEST( Command, do_status )

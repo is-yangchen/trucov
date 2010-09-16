@@ -57,7 +57,7 @@ TEST(get_instance_test, default_case)
    Selector & selector = Selector::get_instance();
  
    // Pointer should be set.
-   EXPECT_NE(NULL, (int)Selector::instance_ptr);
+   EXPECT_NE(NULL, (size_t)Selector::instance_ptr);
 }  
 
 //////////////////////////////////////////////////////////////////////////////
